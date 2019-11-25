@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="/css/materialize.min.css" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#ab44aa">
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Navigasi -->
+    <nav>
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo">England League</a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger">☰</a>
+        <ul id="nav-mobile" class="topnav right hide-on-med-and-down">
+          <li>
+            <a href="/" class="waves-effect">STANDINGS</a>
+          </li>
+          <li>
+            <a href="/matches.html" class="waves-effect">MATCHES</a>
+          </li>
+          <li>
+            <a href="/favourite.html" class="waves-effect">FAVOURITE</a>
+          </li>
+        </ul>
+        <ul id="mobile-demo" class="sidenav">
+          <li>
+            <a href="/index.html" class="waves-effect">STANDINGS</a>
+          </li>
+          <li>
+            <a href="/matches.html" class="waves-effect">MATCHES</a>
+          </li>
+          <li>
+            <a href="/favourite.html" class="waves-effect">FAVOURITE</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Content -->
+    <div class="container">
+      <div id="title-season"></div>
+      <table class="responsive-table highlight">
+        <thead>
+          <tr>
+            <th>Team</th>
+            <th>PG</th>
+            <th>W</th>
+            <th>D</th>
+            <th>L</th>
+            <th>GF</th>
+            <th>GA</th>
+            <th>GD</th>
+            <th>Point</th>
+            <th>Detail</th>
+            <th>Add to Favourite</th>
+          </tr>
+        </thead>
+        <tbody id="table-team-content"></tbody>
+      </table>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="/js/jquery-3.4.1.min.js"></script>
+    <script src="/js/materialize.min.js"></script>
+    <script src="/js/idb.js"></script>
+    <script src="/js/api.js"></script>
+    <script src="/js/idbFunction.js"></script>
+    <script src="/js/extra.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function(){
+        getStandings();
+      })
+    </script>
+  </body>
+</html>

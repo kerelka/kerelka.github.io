@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="/css/materialize.min.css" />
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#ab44aa">
+    <title>Matches</title>
+  </head>
+  <body>
+    <nav>
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo">England League</a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger">☰</a>
+        <ul id="nav-mobile" class="topnav right hide-on-med-and-down">
+          <li>
+            <a href="/" class="waves-effect">STANDINGS</a>
+          </li>
+          <li>
+            <a href="/matches.html" class="waves-effect">MATCHES</a>
+          </li>
+          <li>
+            <a href="/favourite.html" class="waves-effect">FAVOURITE</a>
+          </li>
+        </ul>
+        <ul id="mobile-demo" class="sidenav">
+          <li>
+            <a href="/" class="waves-effect">STANDINGS</a>
+          </li>
+          <li>
+            <a href="/matches.html" class="waves-effect">MATCHES</a>
+          </li>
+          <li>
+            <a href="/favourite.html" class="waves-effect">FAVOURITE</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- content -->
+    <div class="container">
+      <div id="title-matches"></div>
+      <table class="responsive-table highlight striped">
+        <thead>
+          <tr>
+            <th>Team</th>
+            <th>Winner</th>
+            <th>Score</th>
+            <th>Match Day</th>
+            <th>UTC Date</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody id="matches-content"></tbody>
+      </table>
+    </div>
+
+    <script src="/js/jquery-3.4.1.min.js"></script>
+    <script src="/js/materialize.min.js"></script>
+    <script src="/js/api.js"></script>
+    <script src="/js/extra.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function(){
+        getMatches();
+      })
+    </script>
+  </body>
+</html>
